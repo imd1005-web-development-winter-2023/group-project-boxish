@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set the page title -->
+    <title>Group Project-Teaopia</title>
+
+    <!-- Set the charset we're using to UTF-8 -->
+    <meta charset="UTF-8" />
+
+    <!-- Set the screens default zoom / scale to 1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- We are using a CSS Reset file to standardize browser default css -->
+    <link rel="stylesheet" href="./reset.css" />
+
+    <!-- This is where all of our awesome CSS code goes -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Set the Favicon  -->
+    <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header>
+        <div class="header">
+          <div class="header--banner">
+            <img 
+            class ="header--banner--img" 
+            src="images/favicon/Logo-Teaopia.png" 
+            alt="LOGO">
+            <nav class="header--banner--nav">
+             <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">Rewards</a></li>
+              <li><a href="#">Find-us</a></li>
+             </ul>
+            </nav>
+          </div>
+        </div>
+
+        <form action="/search" method="get">
+            <!-- <label for="search"></label> -->
+            <div>
+              <input type="text" id="search" name="q" placeholder="Search...">
+            </div>
+          </form>
+          <button class="search-button">search</button>
+      </header>
+
+    <main>
+        <h1>Strawberry Cake Creme</h1>
+        <p>$8.99</p>
+        <p>Strawberry Cheese Cloud bubble tea is a popular drink that combines a variety of flavors and textures to create a unique and delicious beverage. Made with a milk tea base, fresh strawberry puree, and cream cheese foam, this drink has a creamy and tangy flavor that is sure to please. </p>
+        <p>Serve with</p>
+
+        <div class="container">
+            <ul class="toppings">
+              <li>
+                <img src="images/favicon/tapioca.png" alt="Fruittea1 img" />
+                <p>Topioca</p>
+              </li>
+              <li>
+                <img src="images/favicon/flowerjelly.png" alt="fruittea2 img" />
+                <p>Flower jelly</p>
+              </li>
+              <li>
+                <img src="images/favicon/sweetbarley.png" alt="fruittea3 img" />
+                <p>Sweet Barley</p>
+              </li>
+            </ul>
+        </div>
+
+        <button class="add--cart">Add to cart</button>
+    </main>
+
+    <!-- This is where we add our awesome JavaScript code -->
+    <script src="./main.js"></script>
+  </body>
+</html>

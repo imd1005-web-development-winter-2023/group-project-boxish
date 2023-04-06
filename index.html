@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Set the page title -->
-    <title>Group Project-Bubble</title>
+    <title>Group Project-TEAOPIA</title>
 
     <!-- Set the charset we're using to UTF-8 -->
     <meta charset="UTF-8" />
@@ -20,16 +20,178 @@
     <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
   </head>
   <body>
-    <!--
+    <header>
+      <div class="header">
+        <div class="header--banner">
+          <img 
+          class ="header--banner--img" 
+          src="images/favicon/Logo-Teaopia.png" 
+          alt="LOGO">
+          <nav class="header--banner--nav">
+           <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Rewards</a></li>
+            <li><a href="#">Find-us</a></li>
+           </ul>
+          </nav>
+          <form action="/search" method="get">
+            <!-- <label for="search"></label> -->
+            <div>
+              <input type="text" id="search" name="q" placeholder="Search...">
+            </div>
+          </form>
+          <button class="search-button">search</button>
+        </div>
+      </div>
+    </header>
 
-      ADD YOUR GROUP PROJECT CODE
-
-      YOU MAY REMOVE THE BOILERPLATE CODE BELOW
-
-    -->
     <main>
-      <div id="app"></div>
+      <!-- <main hero section> -->
+      <section class="hero-section">
+        <h1>Teaopia</h1>
+        <h1>Where Every Cup is A Journey</h1>
+        <button class="hero-order-button">Order now</button>
+      </section>
+  
+      <!-- <company introduction section> -->
+      <section class="introduction">
+        <h2 class="introduction-title">Teaopia</h2>
+        <p>The bubble tea brand that's all about embracing a cute, motivated, and energetic lifestyle! Our e-commerce website is specially designed to appeal to the young generation who are always on-the-go and looking for an extra boost of energy.</p>
+      </section>
+
+      <!-- <products section> -->
+      <section class="products-container"> 
+        <div class="container">
+          <h2 class="products">Products</h2>
+          <ul class="tea--posts">
+            <li>
+              <img src="images/favicon/Fruittea1.png" alt="Fruittea1 img" />
+              <p>Fresh Kiwi Fruittea</p>
+            </li>
+            <li>
+              <img src="images/favicon/fruittea2.png" alt="fruittea2 img" />
+              <p>Cheese Matcha Milktea</p>
+            </li>
+            <li>
+              <img src="images/favicon/fruittea3.png" alt="fruittea3 img" />
+              <p>Signature Boba Milktea</p>
+            </li>
+          </ul>
+
+          <ul class="tea--posts2">
+            <li>
+              <img src="images/favicon/milkshake1.png" alt="milkshake1 img" />
+              <p>Redbean Signature Milkshake</p>
+            </li>
+            <li>
+              <img src="images/favicon/fruittea3.png" alt="milkshake2 img" />
+              <p>Pink Peach Fruittea</p>
+            </li>
+            <li>
+              <img src="images/favicon/Fruittea1.png" alt="fruittea1 img" />
+              <p>Jasmine Tea with Cheesemouse</p>
+            </li>
+          </ul>
+        </div>
+        <button class="view--button">View more</button>
+      </section>
+
+     <!-- <features section> -->
+      <section>
+        <h2>Eco-fridenly</h2>
+        <h2>cardboard holders</h2>
+        <h2>for your bubble</h2>
+        <h2>tea</h2>
+        <p>Not only does this decision align with our company's commitment to sustainability, but it also ensures that our customers can enjoy their bubble tea drinks without compromising on quality or convenience.</p>
+        <button>See more</button>
+      </section>
+
+      <!-- <opening hours section> -->
+      <section class="operation-hours-container">
+        <h4 class="operation-hours-title">Check Our Opening Hour</h4>
+        <table>
+          <tr>
+            <td>Mon</td>
+            <td>7am - 9pm</td>
+          </tr>
+          <tr>
+            <td>Tue</td>
+            <td>7am - 9pm</td>
+          </tr>
+          <tr>
+            <td>Wed</td>
+            <td>7am - 9pm</td>
+          </tr>
+          <tr>
+            <td>Thu</td>
+            <td>7am - 9pm</td>
+          </tr>
+          <tr>
+            <td>Fri</td>
+            <td>7am - 11pm</td>
+          </tr>
+          <tr>
+            <td>Sat</td>
+            <td>7am - 10pm</td>
+          </tr>
+          <tr>
+            <td>Sun</td>
+            <td>7am - 10pm</td>
+          </tr>
+        </table>
+        
+      </section>
+
     </main>
+
+      <!-- <contact us section> -->
+    <section>
+      <img class ="contact--us--img" src="images/favicon/Logo-Teaopia.png" alt="LOGO">
+      <h1>Stay in touch!</h1>
+      <p>Stay up-to-date with our latest news, products, and promotions by subscribing to our updates</p>
+
+        <!-- <label for="search"></label> -->
+        <div>
+          <input type="text" id="search" name="q" placeholder="Enter your email address here">
+        </div>
+
+
+    </section>
+
+
+    <footer>
+      <nav class="footer--nav">
+        <ul>
+         <li class="footer--title--nav"><a href="#">Our Company</a></li>
+         <li><a href="#">Home</a></li>
+         <li><a href="#">About</a></li>
+         <li><a href="#">Services</a></li>
+         <li><a href="#">News</a></li>
+        </ul>
+
+        <ul>
+          <li class="footer--title--nav"><a href="#">Menu</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Bubble Tea</a></li>
+          <li><a href="#">All products</a></li>
+          <li><a href="#">Gift</a></li>
+         </ul>
+
+         <ul>
+          <li class="footer--title--nav"><a href="#">Find-us</a></li>
+          <li><a href="#">Pick-up Location</a></li>
+          <li><a href="#">Delivery</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Opening Hour</a></li>
+         </ul>
+       </nav>
+
+       <p>Copyright &copy; 2023 Teaopia. All rights reserved</p>
+       <h2>Teaopia</h2>
+       <h3>Since 2000</h3>
+
+    </footer>
 
     <!-- This is where we add our awesome JavaScript code -->
     <script src="./main.js"></script>
