@@ -199,6 +199,80 @@ td{
   width: 120px;
 }
 
+.menu-content-container{
+  display:flex;
+  height: 100%;
+  width:100%;
+  background-image: url('./images/favicon/menu-bg.png');
+
+}
+
+.discription-container{
+  width: 40%;
+  padding: 5%
+}
+
+.product-image-container{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: green; */
+}
+
+.other-product{
+  width:20%;
+  /* background-color: blue; */
+}
+
+.rate-container{
+  display:flex;
+  flex-direction:row;
+}
+
+.gredient-container{
+  display:flex;
+  flex-direction:column
+}
+
+.product-action{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.amount-action{
+  width: 40%;
+  height: 40px;
+  background-color: white;
+  border-radius: 90px;
+  display:flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right:10px;
+  align-items: center;
+}
+
+.amount-action span{
+  border-left: #000;
+}
+
+.amount-action button{
+  border: none;
+  height: fit-content;
+  background-color: white;
+}
+
+.add-cart-btn{
+  width:40%;
+  height: 40px;
+  background-color: #3A8869;
+  border-radius: 90px;
+  color:white
+}
+
 
 /*
   Screen reader text utility class
