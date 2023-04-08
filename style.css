@@ -204,6 +204,7 @@ td{
   height: 100%;
   width:100%;
   background-image: url('./images/favicon/menu-bg.png');
+  background-size: 100% 150%;
 
 }
 
@@ -217,12 +218,25 @@ td{
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: green; */
+}
+
+.product-image-container img{
+  position: relative;
+  bottom: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60%;
 }
 
 .other-product{
   width:20%;
-  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+}
+
+.other-product-container{
+  height: 33%;
+  width: 100%;
 }
 
 .rate-container{
@@ -273,6 +287,23 @@ td{
   color:white
 }
 
+.other-product-image-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.other-product-image-container img{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60%;
+}
+
+.other-product-container{
+  align-items: center;
+  display:flex;
+}
 
 /*
   Screen reader text utility class
