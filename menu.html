@@ -92,8 +92,9 @@
           </div>
           <div class="product-action">
             <div class="amount-action">
-              <button><img src="./images/favicon/Add.png" /></button>
+              <button onclick="productCountIncrease()"><img src="./images/favicon/Add.png" /></button>
               <span
+                id="productCountContainer"
                 style="
                   border-width: 2px;
                   border-style: solid;
@@ -104,9 +105,10 @@
                   justify-content: center;
                   display: flex;
                 "
-                >3</span
-              >
-              <button><img src="./images/favicon/Minus.png" /></button>
+                >
+                0
+              </span>
+              <button onclick="productCountDecrease()"><img src="./images/favicon/Minus.png" /></button>
             </div>
             <button class="add-cart-btn">Add to cart ></button>
           </div>
@@ -119,21 +121,21 @@
         <div class="other-product">
           <div class="other-product-container">
             <div class="other-product-image-container" style="margin-left:auto; margin-right:auto">
-              <div style="width:100px; background-color: green; border-radius: 50%;">
+              <div style="width:100px; background-color: #FBCF8C; border-radius: 50%;">
                 <img src="./images/favicon/product.png">
               </div>
             </div>
           </div>
           <div class="other-product-container">
             <div class="other-product-image-container" style="margin-left:auto; margin-right:auto">
-              <div style="width:100px; background-color: green; border-radius: 50%;">
+              <div style="width:100px; background-color: #EE9090; border-radius: 50%;">
                 <img src="./images/favicon/product.png">
               </div>
             </div>
           </div>
           <div class="other-product-container">
             <div class="other-product-image-container" style="margin-left:auto; margin-right:auto">
-              <div style="width:100px; background-color: green; border-radius: 50%;">
+              <div style="width:100px; background-color: #C0A3D2; border-radius: 50%;">
                 <img src="./images/favicon/product.png">
               </div>
             </div>
@@ -144,5 +146,9 @@
 
     <!-- This is where we add our awesome JavaScript code -->
     <script src="./main.js"></script>
+    <script>
+      let productCount = 0;
+      let cart = {};
+    </script>
   </body>
 </html>

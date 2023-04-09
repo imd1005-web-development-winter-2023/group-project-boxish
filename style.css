@@ -253,8 +253,8 @@ td{
   display:flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .amount-action{
@@ -284,7 +284,8 @@ td{
   height: 40px;
   background-color: #3A8869;
   border-radius: 90px;
-  color:white
+  color:white;
+  border:none
 }
 
 .other-product-image-container{

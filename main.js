@@ -66,4 +66,17 @@ function inititialise() {
 // Inits & Event Listeners
 //
 
+
+function productCountIncrease(){
+  productCount += 1;
+  document.getElementById("productCountContainer").innerHTML = productCount;
+}
+
+function productCountDecrease(){
+  if(productCount > 0){
+    productCount -= 1;
+    document.getElementById("productCountContainer").innerHTML = productCount;
+  }
+}
+
 inititialise();
