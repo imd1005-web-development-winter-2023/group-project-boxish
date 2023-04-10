@@ -273,7 +273,7 @@ td {
 
 .menu-content-container {
   display: flex;
-  height: 100%;
+  height: 500px;
   width: 100%;
   background-image: url("./images/favicon/menu-bg.png");
   background-size: 100% 150%;

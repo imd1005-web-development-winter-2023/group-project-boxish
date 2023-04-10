@@ -132,6 +132,7 @@
               background-color: red;
               border-radius: 50%;
             "
+            id="pOne"
           >
             <img src="./images/favicon/product.png" />
           </div>
@@ -141,15 +142,19 @@
             <div
               class="other-product-image-container"
               style="margin-left: auto; margin-right: auto"
+              id="pTwo"
             >
               <div
                 style="
-                  width: 100px;
+                  width: 150px;
+                  height: 150px;
                   background-color: #fbcf8c;
                   border-radius: 50%;
+                  display: flex;
+                  align-items: center;
                 "
               >
-                <img src="./images/favicon/product.png" />
+                <img src="./images/favicon/product2.png" style="width: 50%;"/>
               </div>
             </div>
           </div>
@@ -157,15 +162,19 @@
             <div
               class="other-product-image-container"
               style="margin-left: auto; margin-right: auto"
+              id="pThree"
             >
               <div
                 style="
-                  width: 100px;
+                  width: 150px;
+                  height: 150px;
                   background-color: #ee9090;
                   border-radius: 50%;
+                  display: flex;
+                  align-items: center;
                 "
               >
-                <img src="./images/favicon/product.png" />
+                <img style="width: 50%;" src="./images/favicon/product3.png" />
               </div>
             </div>
           </div>
@@ -173,15 +182,19 @@
             <div
               class="other-product-image-container"
               style="margin-left: auto; margin-right: auto"
+              id="pFour"
             >
               <div
                 style="
-                  width: 100px;
+                  width: 150px;
+                  height: 150px;
                   background-color: #c0a3d2;
                   border-radius: 50%;
+                  display: flex;
+                  align-items: center;
                 "
               >
-                <img src="./images/favicon/product.png" />
+                <img style="width: 50%;" src="./images/favicon/product4.png" />
               </div>
             </div>
           </div>
@@ -264,8 +277,29 @@
     <!-- This is where we add our awesome JavaScript code -->
     <script src="./main.js"></script>
     <script>
-      let productCount = 0;
-      let cart = {};
+      let currProductIndex = "pOne";
+      const productsMeta = {
+        "pOne":'./images/favicon/product.png', 
+        "pTwo": './images/favicon/product2.png',
+        "pThree": './images/favicon/product3.png',
+        "pFout": './images/favicon/product4.png'}
+      document.addEventListener("DOMContentLoaded", function () {
+        const hoverableDivs = document.querySelectorAll(".other-product-image-container");
+        hoverableDivs.forEach((div) => {
+          div.addEventListener("click", () => {
+            const curr = document.getElementsByClassName('product-image-container')[0]
+            const currImg = curr.getElementsByTagName('img')[0];
+            const clickedImg = div.getElementsByTagName('img')[0];
+            console.log(currImg);
+            console.log(clickedImg);
+            div.getElementsByTagName('div')[0].innerHTML = '';
+            div.getElementsByTagName('div')[0].appendChild(currImg);
+            curr.getElementsByTagName('div')[0].innerHTML = '';
+            curr.getElementsByTagName('div')[0].appendChild(clickedImg);
+          });
+        });
+        updateSlider();
+      });
     </script>
   </body>
 </html>
