@@ -66,17 +66,63 @@ function inititialise() {
 // Inits & Event Listeners
 //
 
-
-function productCountIncrease(){
+function productCountIncrease() {
   productCount += 1;
   document.getElementById("productCountContainer").innerHTML = productCount;
 }
 
-function productCountDecrease(){
-  if(productCount > 0){
+function productCountDecrease() {
+  if (productCount > 0) {
     productCount -= 1;
     document.getElementById("productCountContainer").innerHTML = productCount;
   }
 }
+
+function addToCart(){
+  document.getElementById("cartCount").innerHTML = productCount;
+}
+
+function slide(direction) {
+  const sliderImages = document.getElementById("sliderImages");
+  const imageCount = sliderImages.children.length;
+  currentIndex += direction;
+
+  if (currentIndex >= imageCount) {
+    currentIndex = 0;
+  } else if (currentIndex < 0) {
+    currentIndex = imageCount - 1;
+  }
+
+  sliderImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function nextSlider(){
+  if(currSliderIndex + 1 <= slidersId.length -1){
+    currSliderIndex += 1
+  } else {
+    currSliderIndex = 0;
+  } 
+  updateSlider();
+}
+
+function previousSlider(){
+  if(currSliderIndex - 1 >= 0){
+    currSliderIndex -= 1
+  } else {
+    currSliderIndex = slidersId.length-1;
+  } 
+  updateSlider();
+}
+
+function updateSlider(){
+  document.querySelectorAll(".slider-img").forEach((div)=>{
+    if(div.id === slidersId[currSliderIndex]){
+      div.style.width = '40%';
+    } else {
+      div.style.width = '20%';
+    }
+  });
+}
+
 
 inititialise();

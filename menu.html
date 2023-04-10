@@ -30,22 +30,28 @@
           />
           <nav class="header--banner--nav">
             <ul>
-              <li><a href="#">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="#">Menu</a></li>
               <li><a href="#">Rewards</a></li>
               <li><a href="#">Find-us</a></li>
             </ul>
           </nav>
+          <form action="/search" method="get" class="search-container">
+            <!-- <label for="search"></label> -->
+            <div>
+              <input type="text" id="search" name="q" placeholder="Search..." />
+            </div>
+            <button class="search-button"><img src="./images/Search.png"></button>
+          </form>
+
+          <div class="cart-container" style="position:relative">
+            <img src="./images/cart.png">
+            <div class="cart-count-container">
+              <span class="cartCount" id="cartCount">0</span>
+            </div>
+          </div>
         </div>
       </div>
-
-      <form action="/search" method="get">
-        <!-- <label for="search"></label> -->
-        <div>
-          <input type="text" id="search" name="q" placeholder="Search..." />
-        </div>
-      </form>
-      <button class="search-button">search</button>
     </header>
 
     <main>
@@ -63,11 +69,11 @@
             <span>$8.99</span>
           </div>
           <span class="product-detail-container">
-            Strawberry Cheese Cloud bubble tea is a popular drink that combines a
-            variety of flavors and textures to create a unique and delicious
-            beverage. Made with a milk tea base, fresh strawberry puree, and cream
-            cheese foam, this drink has a creamy and tangy flavor that is sure to
-            please.
+            Strawberry Cheese Cloud bubble tea is a popular drink that combines
+            a variety of flavors and textures to create a unique and delicious
+            beverage. Made with a milk tea base, fresh strawberry puree, and
+            cream cheese foam, this drink has a creamy and tangy flavor that is
+            sure to please.
           </span>
           <p>Serve with</p>
           <div
@@ -92,7 +98,9 @@
           </div>
           <div class="product-action">
             <div class="amount-action">
-              <button onclick="productCountIncrease()"><img src="./images/favicon/Add.png" /></button>
+              <button onclick="productCountIncrease()">
+                <img src="./images/favicon/Add.png" />
+              </button>
               <span
                 id="productCountContainer"
                 style="
@@ -101,48 +109,157 @@
                   width: 40%;
                   border-top: none;
                   border-bottom: none;
-                  border-color: #ABABAB;
+                  border-color: #ababab;
                   justify-content: center;
                   display: flex;
                 "
-                >
+              >
                 0
               </span>
-              <button onclick="productCountDecrease()"><img src="./images/favicon/Minus.png" /></button>
+              <button onclick="productCountDecrease()">
+                <img src="./images/favicon/Minus.png" />
+              </button>
             </div>
-            <button class="add-cart-btn">Add to cart ></button>
+            <button class="add-cart-btn" onclick="addToCart()">Add to cart ></button>
           </div>
         </div>
         <div class="product-image-container">
-          <div style="width:300px; height:300px; position:relative; background-color: red; border-radius: 50%;">
-            <img src="./images/favicon/product.png">
+          <div
+            style="
+              width: 300px;
+              height: 300px;
+              position: relative;
+              background-color: red;
+              border-radius: 50%;
+            "
+          >
+            <img src="./images/favicon/product.png" />
           </div>
         </div>
         <div class="other-product">
           <div class="other-product-container">
-            <div class="other-product-image-container" style="margin-left:auto; margin-right:auto">
-              <div style="width:100px; background-color: #FBCF8C; border-radius: 50%;">
-                <img src="./images/favicon/product.png">
+            <div
+              class="other-product-image-container"
+              style="margin-left: auto; margin-right: auto"
+            >
+              <div
+                style="
+                  width: 100px;
+                  background-color: #fbcf8c;
+                  border-radius: 50%;
+                "
+              >
+                <img src="./images/favicon/product.png" />
               </div>
             </div>
           </div>
           <div class="other-product-container">
-            <div class="other-product-image-container" style="margin-left:auto; margin-right:auto">
-              <div style="width:100px; background-color: #EE9090; border-radius: 50%;">
-                <img src="./images/favicon/product.png">
+            <div
+              class="other-product-image-container"
+              style="margin-left: auto; margin-right: auto"
+            >
+              <div
+                style="
+                  width: 100px;
+                  background-color: #ee9090;
+                  border-radius: 50%;
+                "
+              >
+                <img src="./images/favicon/product.png" />
               </div>
             </div>
           </div>
           <div class="other-product-container">
-            <div class="other-product-image-container" style="margin-left:auto; margin-right:auto">
-              <div style="width:100px; background-color: #C0A3D2; border-radius: 50%;">
-                <img src="./images/favicon/product.png">
+            <div
+              class="other-product-image-container"
+              style="margin-left: auto; margin-right: auto"
+            >
+              <div
+                style="
+                  width: 100px;
+                  background-color: #c0a3d2;
+                  border-radius: 50%;
+                "
+              >
+                <img src="./images/favicon/product.png" />
               </div>
             </div>
           </div>
         </div>
       </div>
     </main>
+
+    <!-- <contact us section> -->
+    <section class="contact-container">
+      <img
+        class="contact--us--img"
+        src="images/favicon/Logo-Teaopia.png"
+        alt="LOGO"
+      />
+      <div class="contact-message-container">
+        <h3>Stay in touch!</h3>
+        <p>
+          Stay up-to-date with our latest news, products, and promotions by
+          subscribing to our updates
+        </p>
+      </div>
+      <div class="email-input-container">
+        <input
+          class="email-input-box"
+          type="text"
+          id="search"
+          name="q"
+          placeholder="Enter your email address here"
+        />
+        <button class="subscribe-btn">Subscribe</button>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display: flex; justify-content: space-around; color: white">
+        <div>
+          <ul class="footer-list">
+            <li class="footer-title-nav"><a href="#">Our Company</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="footer-list">
+            <li class="footer-title-nav"><a href="#">Menu</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Bubble Tea</a></li>
+            <li><a href="#">All products</a></li>
+            <li><a href="#">Gift</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="footer-list">
+            <li class="footer-title-nav"><a href="#">Find-us</a></li>
+            <li><a href="#">Pick-up Location</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Opening Hour</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="font-size: 64px; font-style: italic">Teaopia</h2>
+          <h3 style="font-size: 32px; font-style: italic">Since 2000</h3>
+          <div class="icons">
+            <a href="#"><img src="./images/fb.png" /></a>
+            <a href="#"><img src="./images/linkedin.png" /></a>
+            <a href="#"><img src="./images/twitter.png" /></a>
+            <a href="#"><img src="./images/ig.png" /></a>
+          </div>
+        </div>
+      </div>
+
+      <p class="copy-right-container">
+        Copyright &copy; 2023 Teaopia. All rights reserved
+      </p>
+    </footer>
 
     <!-- This is where we add our awesome JavaScript code -->
     <script src="./main.js"></script>

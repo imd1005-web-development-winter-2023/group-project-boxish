@@ -23,25 +23,35 @@
     <header>
       <div class="header">
         <div class="header--banner">
-          <img 
-          class ="header--banner--img" 
-          src="images/favicon/Logo-Teaopia.png" 
-          alt="LOGO">
+          <img
+            class="header--banner--img"
+            src="images/favicon/Logo-Teaopia.png"
+            alt="LOGO"
+          />
           <nav class="header--banner--nav">
-           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Rewards</a></li>
-            <li><a href="#">Find-us</a></li>
-           </ul>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="#">Rewards</a></li>
+              <li><a href="#">Find-us</a></li>
+            </ul>
           </nav>
-          <form action="/search" method="get">
+          <form action="/search" method="get" class="search-container">
             <!-- <label for="search"></label> -->
             <div>
-              <input type="text" id="search" name="q" placeholder="Search...">
+              <input type="text" id="search" name="q" placeholder="Search..." />
             </div>
+            <button class="search-button">
+              <img src="./images/Search.png" />
+            </button>
           </form>
-          <button class="search-button">search</button>
+
+          <div class="cart-container" style="position: relative">
+            <img src="./images/cart.png" />
+            <div class="cart-count-container">
+              <span class="cartCount" id="cartCount">0</span>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -53,147 +63,278 @@
         <h1>Where Every Cup is A Journey</h1>
         <button class="hero-order-button">Order now</button>
       </section>
-  
+
       <!-- <company introduction section> -->
       <section class="introduction">
-        <h2 class="introduction-title">Teaopia</h2>
-        <p>The bubble tea brand that's all about embracing a cute, motivated, and energetic lifestyle! Our e-commerce website is specially designed to appeal to the young generation who are always on-the-go and looking for an extra boost of energy.</p>
+        <div class="introduction-container">
+          <h2 class="introduction-title">Teaopia</h2>
+          <p>
+            The bubble tea brand that's all about embracing a cute, motivated,
+            and energetic lifestyle! Our e-commerce website is specially
+            designed to appeal to the young generation who are always on-the-go
+            and looking for an extra boost of energy.
+          </p>
+        </div>
       </section>
 
       <!-- <products section> -->
-      <section class="products-container"> 
+      <section class="products-container">
         <div class="container">
           <h2 class="products">Products</h2>
-          <ul class="tea--posts">
-            <li>
-              <img src="images/favicon/Fruittea1.png" alt="Fruittea1 img" />
-              <p>Fresh Kiwi Fruittea</p>
-            </li>
-            <li>
-              <img src="images/favicon/fruittea2.png" alt="fruittea2 img" />
-              <p>Cheese Matcha Milktea</p>
-            </li>
-            <li>
-              <img src="images/favicon/fruittea3.png" alt="fruittea3 img" />
-              <p>Signature Boba Milktea</p>
-            </li>
-          </ul>
-
-          <ul class="tea--posts2">
-            <li>
-              <img src="images/favicon/milkshake1.png" alt="milkshake1 img" />
-              <p>Redbean Signature Milkshake</p>
-            </li>
-            <li>
-              <img src="images/favicon/fruittea3.png" alt="milkshake2 img" />
-              <p>Pink Peach Fruittea</p>
-            </li>
-            <li>
-              <img src="images/favicon/Fruittea1.png" alt="fruittea1 img" />
-              <p>Jasmine Tea with Cheesemouse</p>
-            </li>
-          </ul>
+          <div class="grid-container">
+            <div
+              class="grid-item"
+              style="background-image: url('./images/favicon/Fruittea1.png')"
+            >
+              <span style="display: none; color: black" id="productName"
+                >Fresh Kiwi Fruittea</span
+              >
+            </div>
+            <div
+              class="grid-item"
+              style="background-image: url('./images/favicon/fruittea2.png')"
+            >
+              <span style="display: none; color: black" id="productName"
+                >Cheese Matcha Milktea
+              </span>
+            </div>
+            <div
+              class="grid-item"
+              style="background-image: url('./images/favicon/fruittea3.png')"
+            >
+              <span style="display: none; color: black" id="productName"
+                >Signature Boba Milktea
+              </span>
+            </div>
+            <div
+              class="grid-item"
+              style="background-image: url('./images/favicon/milkshake1.png')"
+            >
+              <span style="display: none; color: black" id="productName"
+                >Redbean Signature Milkshake</span
+              >
+            </div>
+            <div
+              class="grid-item"
+              style="background-image: url('./images/favicon/milkshake2.png')"
+            >
+              <span style="display: none; color: black" id="productName"
+                >Pink Peach Fruittea</span
+              >
+            </div>
+            <div
+              class="grid-item"
+              style="background-image: url('./images/favicon/milkshake2.png')"
+            >
+              <span style="display: none; color: black" id="productName"
+                >Jasmine Tea with Cheesemouse</span
+              >
+            </div>
+          </div>
         </div>
-        <button class="view--button">View more</button>
+        <button class="view-button">View more</button>
       </section>
 
-     <!-- <features section> -->
+      <!-- <features section> -->
       <section>
-        <h2>Eco-fridenly</h2>
-        <h2>cardboard holders</h2>
-        <h2>for your bubble</h2>
-        <h2>tea</h2>
-        <p>Not only does this decision align with our company's commitment to sustainability, but it also ensures that our customers can enjoy their bubble tea drinks without compromising on quality or convenience.</p>
-        <button>See more</button>
+        <div class="slider">
+          <div class="slider-title-container">
+            <img src="./images/Sakura.png" />
+            <span
+              style="
+                font-size: xx-large;
+                font-weight: bolder;
+                align-items: center;
+                display: flex;
+                font-color: white;
+                color: white;
+                padding-left: 30px;
+              "
+            >
+              Our Features
+            </span>
+          </div>
+          <div class="slider-main-content">
+            <div class="description">
+              <h2>Eco-friendly cardboard holders for your bubble tea</h2>
+              <p style="margin-bottom: 40px">
+                Not only does this decision align with our company's commitment
+                to sustainability, but it also ensures that our customers can
+                enjoy their bubble tea drinks without compromising on quality or
+                convenience.
+              </p>
+              <button
+                style="
+                  border-radius: 50px;
+                  background-color: white;
+                  width: 90px;
+                  display: block;
+                  text-align: center;
+                  border: none;
+                  color: black;
+                "
+              >
+                See more
+              </button>
+            </div>
+            <div class="cards">
+              <img
+                class="slider-img"
+                id="siOne"
+                src="./images/sliden-one.png"
+              />
+              <img
+                class="slider-img"
+                id="siTwo"
+                src="./images/slider-two.png"
+              />
+              <img
+                class="slider-img"
+                id="siThree"
+                src="./images/sliden-one.png"
+              />
+            </div>
+          </div>
+          <div class="slider-actions">
+            <button class="slider-button" onclick="previousSlider()">&lt;</button>
+            <button class="slider-button" onclick="nextSlider()">&gt;</button>
+          </div>
+        </div>
       </section>
 
       <!-- <opening hours section> -->
       <section class="operation-hours-container">
-        <h4 class="operation-hours-title">Check Our Opening Hour</h4>
-        <table>
-          <tr>
-            <td>Mon</td>
-            <td>7am - 9pm</td>
-          </tr>
-          <tr>
-            <td>Tue</td>
-            <td>7am - 9pm</td>
-          </tr>
-          <tr>
-            <td>Wed</td>
-            <td>7am - 9pm</td>
-          </tr>
-          <tr>
-            <td>Thu</td>
-            <td>7am - 9pm</td>
-          </tr>
-          <tr>
-            <td>Fri</td>
-            <td>7am - 11pm</td>
-          </tr>
-          <tr>
-            <td>Sat</td>
-            <td>7am - 10pm</td>
-          </tr>
-          <tr>
-            <td>Sun</td>
-            <td>7am - 10pm</td>
-          </tr>
-        </table>
-        
+        <div style="font-size: xx-large; margin-right: 200px">
+          <h4 class="operation-hours-title">Check Our Opening Hour</h4>
+          <table style="width: 100%">
+            <tr>
+              <td>Mon</td>
+              <td>7am - 9pm</td>
+            </tr>
+            <tr>
+              <td>Tue</td>
+              <td>7am - 9pm</td>
+            </tr>
+            <tr>
+              <td>Wed</td>
+              <td>7am - 9pm</td>
+            </tr>
+            <tr>
+              <td>Thu</td>
+              <td>7am - 9pm</td>
+            </tr>
+            <tr>
+              <td>Fri</td>
+              <td>7am - 11pm</td>
+            </tr>
+            <tr>
+              <td>Sat</td>
+              <td>7am - 10pm</td>
+            </tr>
+            <tr>
+              <td>Sun</td>
+              <td>7am - 10pm</td>
+            </tr>
+          </table>
+        </div>
+        <img src="./images/operation.png" />
       </section>
-
     </main>
 
-      <!-- <contact us section> -->
-    <section>
-      <img class ="contact--us--img" src="images/favicon/Logo-Teaopia.png" alt="LOGO">
-      <h1>Stay in touch!</h1>
-      <p>Stay up-to-date with our latest news, products, and promotions by subscribing to our updates</p>
-
-        <!-- <label for="search"></label> -->
-        <div>
-          <input type="text" id="search" name="q" placeholder="Enter your email address here">
-        </div>
-
-
+    <!-- <contact us section> -->
+    <section class="contact-container">
+      <img
+        class="contact--us--img"
+        src="images/favicon/Logo-Teaopia.png"
+        alt="LOGO"
+      />
+      <div class="contact-message-container">
+        <h3>Stay in touch!</h3>
+        <p>
+          Stay up-to-date with our latest news, products, and promotions by
+          subscribing to our updates
+        </p>
+      </div>
+      <div class="email-input-container">
+        <input
+          class="email-input-box"
+          type="text"
+          id="search"
+          name="q"
+          placeholder="Enter your email address here"
+        />
+        <button class="subscribe-btn">Subscribe</button>
+      </div>
     </section>
 
-
     <footer>
-      <nav class="footer--nav">
-        <ul>
-         <li class="footer--title--nav"><a href="#">Our Company</a></li>
-         <li><a href="#">Home</a></li>
-         <li><a href="#">About</a></li>
-         <li><a href="#">Services</a></li>
-         <li><a href="#">News</a></li>
-        </ul>
+      <div style="display: flex; justify-content: space-around; color: white">
+        <div>
+          <ul class="footer-list">
+            <li class="footer-title-nav"><a href="#">Our Company</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="footer-list">
+            <li class="footer-title-nav"><a href="#">Menu</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Bubble Tea</a></li>
+            <li><a href="#">All products</a></li>
+            <li><a href="#">Gift</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="footer-list">
+            <li class="footer-title-nav"><a href="#">Find-us</a></li>
+            <li><a href="#">Pick-up Location</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Opening Hour</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="font-size: 64px; font-style: italic">Teaopia</h2>
+          <h3 style="font-size: 32px; font-style: italic">Since 2000</h3>
+          <div class="icons">
+            <a href="#"><img src="./images/fb.png" /></a>
+            <a href="#"><img src="./images/linkedin.png" /></a>
+            <a href="#"><img src="./images/twitter.png" /></a>
+            <a href="#"><img src="./images/ig.png" /></a>
+          </div>
+        </div>
+      </div>
 
-        <ul>
-          <li class="footer--title--nav"><a href="#">Menu</a></li>
-          <li><a href="#">Trending</a></li>
-          <li><a href="#">Bubble Tea</a></li>
-          <li><a href="#">All products</a></li>
-          <li><a href="#">Gift</a></li>
-         </ul>
-
-         <ul>
-          <li class="footer--title--nav"><a href="#">Find-us</a></li>
-          <li><a href="#">Pick-up Location</a></li>
-          <li><a href="#">Delivery</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Opening Hour</a></li>
-         </ul>
-       </nav>
-
-       <p>Copyright &copy; 2023 Teaopia. All rights reserved</p>
-       <h2>Teaopia</h2>
-       <h3>Since 2000</h3>
-
+      <p class="copy-right-container">
+        Copyright &copy; 2023 Teaopia. All rights reserved
+      </p>
     </footer>
 
     <!-- This is where we add our awesome JavaScript code -->
     <script src="./main.js"></script>
+    <script>
+      let productCount = 0;
+      let cart = {};
+      let currentIndex = 0;
+      const slidersId = ["siOne", "siTwo", "siThree"]
+      let currSliderIndex = 0;
+      document.addEventListener("DOMContentLoaded", function () {
+        const hoverableDivs = document.querySelectorAll(".grid-item");
+        hoverableDivs.forEach((div) => {
+          div.addEventListener("mouseover", () => {
+            const nameElement = div.getElementsByTagName("span")[0];
+            nameElement.style.display = "block";
+          });
+          div.addEventListener("mouseout", () => {
+            const nameElement = div.getElementsByTagName("span")[0];
+            nameElement.style.display = "none";
+          });
+        });
+        updateSlider();
+      });
+    </script>
   </body>
 </html>
