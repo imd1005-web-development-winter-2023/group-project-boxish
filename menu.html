@@ -16,6 +16,11 @@
     <!-- This is where all of our awesome CSS code goes -->
     <link rel="stylesheet" href="./style.css" />
 
+    <!-- This is fonts family we use  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400&display=swap" rel="stylesheet">
+
     <!-- Set the Favicon  -->
     <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
   </head>
@@ -57,7 +62,7 @@
     <main>
       <div class="menu-content-container">
         <div class="discription-container">
-          <span>Strawberry Cake Creme</span>
+          <span class="product-title">Strawberry Cake Creme</span>
           <div style="display: flex; flex-direction: row">
             <div class="rate-container">
               <img src="./images/favicon/Christmas Star.png" />
@@ -66,7 +71,7 @@
               <img src="./images/favicon/Christmas Star.png" />
               <img src="./images/favicon/Hand Drawn Star.png" />
             </div>
-            <span>$8.99</span>
+            <span class="product-price">$8.99</span>
           </div>
           <span class="product-detail-container">
             Strawberry Cheese Cloud bubble tea is a popular drink that combines
@@ -84,15 +89,30 @@
             "
           >
             <div class="ingredient-container">
-              <img />
+              <div class="aaaaaaa">
+                <img src="./images/ingredientsOne.png"/>
+                <div class="ingredient-count-container">
+                  <span class="ingredientCount" id="ingredientCount"></span>
+                </div>
+              </div>
               <span>Tapioca</span>
             </div>
             <div class="ingredient-container">
-              <img />
+              <div class="aaaaaaa">
+                <img src="./images/ingredientsTwo.png"/>
+                <div class="ingredient-count-container">
+                  <span class="ingredientCount" id="ingredientCount"></span>
+                </div>
+              </div>
               <span>Flower Jelly</span>
             </div>
             <div class="ingredient-container">
-              <img />
+              <div class="aaaaaaa">
+                <img src="./images/ingredientsThree.png"/>
+                <div class="ingredient-count-container">
+                  <span class="ingredientCount" id="ingredientCount"></span>
+                </div>
+              </div>
               <span>Sweet Barley</span>
             </div>
           </div>
@@ -126,15 +146,11 @@
         <div class="product-image-container">
           <div
             style="
-              width: 300px;
-              height: 300px;
               position: relative;
-              background-color: red;
-              border-radius: 50%;
             "
             id="pOne"
           >
-            <img src="./images/favicon/product.png" />
+            <img src="./images/strawberry.png" />
           </div>
         </div>
         <div class="other-product">
@@ -146,15 +162,11 @@
             >
               <div
                 style="
-                  width: 150px;
-                  height: 150px;
-                  background-color: #fbcf8c;
-                  border-radius: 50%;
                   display: flex;
                   align-items: center;
                 "
               >
-                <img src="./images/favicon/product2.png" style="width: 50%;"/>
+                <img src="./images/milktea2.png" style="width: 50%;"/>
               </div>
             </div>
           </div>
@@ -166,15 +178,11 @@
             >
               <div
                 style="
-                  width: 150px;
-                  height: 150px;
-                  background-color: #ee9090;
-                  border-radius: 50%;
                   display: flex;
                   align-items: center;
                 "
               >
-                <img style="width: 50%;" src="./images/favicon/product3.png" />
+                <img style="width: 50%;" src="./images/milketea3.png" />
               </div>
             </div>
           </div>
@@ -186,15 +194,11 @@
             >
               <div
                 style="
-                  width: 150px;
-                  height: 150px;
-                  background-color: #c0a3d2;
-                  border-radius: 50%;
                   display: flex;
                   align-items: center;
                 "
               >
-                <img style="width: 50%;" src="./images/favicon/product4.png" />
+                <img style="width: 50%;" src="./images/milktea4.png" />
               </div>
             </div>
           </div>
@@ -228,7 +232,7 @@
       </div>
     </section>
 
-    <footer>
+    <footer class="footer-nav-list">
       <div style="display: flex; justify-content: space-around; color: white">
         <div>
           <ul class="footer-list">
@@ -277,6 +281,7 @@
     <!-- This is where we add our awesome JavaScript code -->
     <script src="./main.js"></script>
     <script>
+      let productCount = 0;
       let currProductIndex = "pOne";
       const productsMeta = {
         "pOne":'./images/favicon/product.png', 
@@ -290,8 +295,6 @@
             const curr = document.getElementsByClassName('product-image-container')[0]
             const currImg = curr.getElementsByTagName('img')[0];
             const clickedImg = div.getElementsByTagName('img')[0];
-            console.log(currImg);
-            console.log(clickedImg);
             div.getElementsByTagName('div')[0].innerHTML = '';
             div.getElementsByTagName('div')[0].appendChild(currImg);
             curr.getElementsByTagName('div')[0].innerHTML = '';
@@ -299,6 +302,17 @@
           });
         });
         updateSlider();
+        const ingredients = document.querySelectorAll(".aaaaaaa");
+        ingredients.forEach((div) => {
+          div.addEventListener("click", ()=>{
+            ingredients.forEach((div) => {
+              const clickedIngredients = div.getElementsByClassName("ingredient-count-container")[0];
+            clickedIngredients.style.display = "none";
+            })
+            const clickedIngredients = div.getElementsByClassName("ingredient-count-container")[0];
+            clickedIngredients.style.display = "flex";
+          })
+        })
       });
     </script>
   </body>

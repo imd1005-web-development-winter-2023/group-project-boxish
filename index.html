@@ -16,6 +16,11 @@
     <!-- This is where all of our awesome CSS code goes -->
     <link rel="stylesheet" href="./style.css" />
 
+    <!-- This is fonts family we use  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400&display=swap" rel="stylesheet">
+
     <!-- Set the Favicon  -->
     <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
   </head>
@@ -57,12 +62,13 @@
     </header>
 
     <main>
-      <!-- <main hero section> -->
+
       <section class="hero-section">
-        <h1>Teaopia</h1>
+        <h1 class="home-title">Teaopia</h1>
         <h1>Where Every Cup is A Journey</h1>
-        <button class="hero-order-button">Order now</button>
+        <button class="hero-order-button" onclick="window.location.href='menu.html'">Order now</button>
       </section>
+      
 
       <!-- <company introduction section> -->
       <section class="introduction">
@@ -86,7 +92,7 @@
               class="grid-item"
               style="background-image: url('./images/favicon/Fruittea1.png')"
             >
-              <span style="display: none; color: black" id="productName"
+              <span style="display: none; color: rgb(255, 255, 255)" id="productName"
                 >Fresh Kiwi Fruittea</span
               >
             </div>
@@ -94,15 +100,17 @@
               class="grid-item"
               style="background-image: url('./images/favicon/fruittea2.png')"
             >
-              <span style="display: none; color: black" id="productName"
+              <span style="display: none; color: rgb(255, 255, 255)" id="productName"
                 >Cheese Matcha Milktea
               </span>
-            </div>
+            </div> 
+            
+
             <div
               class="grid-item"
               style="background-image: url('./images/favicon/fruittea3.png')"
             >
-              <span style="display: none; color: black" id="productName"
+              <span style="display: none; color: rgb(255, 255, 255)" id="productName"
                 >Signature Boba Milktea
               </span>
             </div>
@@ -110,7 +118,7 @@
               class="grid-item"
               style="background-image: url('./images/favicon/milkshake1.png')"
             >
-              <span style="display: none; color: black" id="productName"
+              <span style="display: none; color: rgb(255, 255, 255)" id="productName"
                 >Redbean Signature Milkshake</span
               >
             </div>
@@ -118,7 +126,7 @@
               class="grid-item"
               style="background-image: url('./images/favicon/milkshake2.png')"
             >
-              <span style="display: none; color: black" id="productName"
+              <span style="display: none; color: rgb(255, 255, 255)" id="productName"
                 >Pink Peach Fruittea</span
               >
             </div>
@@ -126,13 +134,13 @@
               class="grid-item"
               style="background-image: url('./images/favicon/milkshake2.png')"
             >
-              <span style="display: none; color: black" id="productName"
+              <span style="display: none; color: rgb(255, 255, 255)" id="productName"
                 >Jasmine Tea with Cheesemouse</span
               >
             </div>
           </div>
         </div>
-        <button class="view-button">View more</button>
+        <button class="view-button" onclick="window.location.href='menu.html'">View more</button>
       </section>
 
       <!-- <features section> -->
@@ -144,7 +152,7 @@
               style="
                 font-size: xx-large;
                 font-weight: bolder;
-                align-items: center;
+                align-items:center;
                 display: flex;
                 font-color: white;
                 color: white;
@@ -156,42 +164,30 @@
           </div>
           <div class="slider-main-content">
             <div class="description">
-              <h2>Eco-friendly cardboard holders for your bubble tea</h2>
+              <h2 class="des-title">Eco-friendly cardboard holders for your bubble tea</h2>
               <p style="margin-bottom: 40px">
                 Not only does this decision align with our company's commitment
                 to sustainability, but it also ensures that our customers can
                 enjoy their bubble tea drinks without compromising on quality or
                 convenience.
               </p>
-              <button
-                style="
-                  border-radius: 50px;
-                  background-color: white;
-                  width: 90px;
-                  display: block;
-                  text-align: center;
-                  border: none;
-                  color: black;
-                "
-              >
-                See more
-              </button>
+              <button class="see-more-button">See more</button>
             </div>
             <div class="cards">
               <img
                 class="slider-img"
                 id="siOne"
-                src="./images/sliden-one.png"
+                src="images/sliden-one.jpg"
               />
               <img
                 class="slider-img"
                 id="siTwo"
-                src="./images/slider-two.png"
+                src="images/slider-two.jpg"
               />
               <img
                 class="slider-img"
                 id="siThree"
-                src="./images/sliden-one.png"
+                src="images/sliden-three.jpg"
               />
             </div>
           </div>
@@ -206,7 +202,7 @@
       <section class="operation-hours-container">
         <div style="font-size: xx-large; margin-right: 200px">
           <h4 class="operation-hours-title">Check Our Opening Hour</h4>
-          <table style="width: 100%">
+          <table style="width: 101%">
             <tr>
               <td>Mon</td>
               <td>7am - 9pm</td>
@@ -267,7 +263,7 @@
       </div>
     </section>
 
-    <footer>
+    <footer class="footer-nav-list">
       <div style="display: flex; justify-content: space-around; color: white">
         <div>
           <ul class="footer-list">
@@ -280,7 +276,7 @@
         </div>
         <div>
           <ul class="footer-list">
-            <li class="footer-title-nav"><a href="#">Menu</a></li>
+            <li class="footer-title-nav"><a href="menu.html">Menu</a></li>
             <li><a href="#">Trending</a></li>
             <li><a href="#">Bubble Tea</a></li>
             <li><a href="#">All products</a></li>
