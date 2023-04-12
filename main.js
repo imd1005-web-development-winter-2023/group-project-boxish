@@ -126,3 +126,5 @@ function updateSlider(){
 
 
 inititialise();
+
+/*over write the inappropriate language*/
