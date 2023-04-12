@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set the page title -->
+    <title>Group Project-Teaopia</title>
+
+    <!-- Set the charset we're using to UTF-8 -->
+    <meta charset="UTF-8" />
+
+    <!-- Set the screens default zoom / scale to 1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- We are using a CSS Reset file to standardize browser default css -->
+    <link rel="stylesheet" href="./reset.css" />
+
+    <!-- This is where all of our awesome CSS code goes -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- This is fonts family we use  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400&display=swap" rel="stylesheet">
+
+    <!-- Set the Favicon  -->
+    <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="header--banner">
+          <img
+            class="header--banner--img"
+            src="images/favicon/Logo-Teaopia.png"
+            alt="LOGO"
+          />
+          <nav class="header--banner--nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">Rewards</a></li>
+              <li><a href="find-us.html">Find-us</a></li>
+            </ul>
+          </nav>
+          <form action="/search" method="get" class="search-container">
+            <!-- <label for="search"></label> -->
+            <div>
+              <input type="text" id="search" name="q" placeholder="Search..." />
+            </div>
+            <button class="search-button"><img src="./images/Search.png"></button>
+          </form>
+
+          <div class="cart-container" style="position:relative">
+            <img src="./images/cart.png">
+            <div class="cart-count-container">
+              <span class="cartCount" id="cartCount">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="menu-content-container">
+        <div class="discription-container">
+          <span class="product-title">Strawberry Cake Creme</span>
+          <div style="display: flex; flex-direction: row">
+            <div class="rate-container">
+              <img src="./images/favicon/Christmas Star.png" />
+              <img src="./images/favicon/Christmas Star.png" />
+              <img src="./images/favicon/Christmas Star.png" />
+              <img src="./images/favicon/Christmas Star.png" />
+              <img src="./images/favicon/Hand Drawn Star.png" />
+            </div>
+            <span class="product-price">$8.99</span>
+          </div>
+          <span class="product-detail-container">
+            Strawberry Cheese Cloud bubble tea is a popular drink that combines
+            a variety of flavors and textures to create a unique and delicious
+            beverage. Made with a milk tea base, fresh strawberry puree, and
+            cream cheese foam, this drink has a creamy and tangy flavor that is
+            sure to please.
+          </span>
+          <p>Serve with</p>
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+            "
+          >
+            <div class="ingredient-container">
+              <div class="aaaaaaa">
+                <img src="./images/ingredientsOne.png"/>
+                <div class="ingredient-count-container">
+                  <span class="ingredientCount" id="ingredientCount"></span>
+                </div>
+              </div>
+              <span>Tapioca</span>
+            </div>
+            <div class="ingredient-container">
+              <div class="aaaaaaa">
+                <img src="./images/ingredientsTwo.png"/>
+                <div class="ingredient-count-container">
+                  <span class="ingredientCount" id="ingredientCount"></span>
+                </div>
+              </div>
+              <span>Flower Jelly</span>
+            </div>
+            <div class="ingredient-container">
+              <div class="aaaaaaa">
+                <img src="./images/ingredientsThree.png"/>
+                <div class="ingredient-count-container">
+                  <span class="ingredientCount" id="ingredientCount"></span>
+                </div>
+              </div>
+              <span>Sweet Barley</span>
+            </div>
+          </div>
+          <div class="product-action">
+            <div class="amount-action">
+              <button onclick="productCountIncrease()">
+                <img src="./images/favicon/Add.png" />
+              </button>
+              <span
+                id="productCountContainer"
+                style="
+                  border-width: 2px;
+                  border-style: solid;
+                  width: 40%;
+                  border-top: none;
+                  border-bottom: none;
+                  border-color: #ababab;
+                  justify-content: center;
+                  display: flex;
+                "
+              >
+                0
+              </span>
+              <button onclick="productCountDecrease()">
+                <img src="./images/favicon/Minus.png" />
+              </button>
+            </div>
+            <button class="add-cart-btn" onclick="addToCart()">Add to cart ></button>
+          </div>
+        </div>
+        <div class="product-image-container">
+          <div
+            style="
+              position: relative;
+            "
+            id="pOne"
+          >
+            <img src="./images/strawberry.png" />
+          </div>
+        </div>
+        <div class="other-product">
+          <div class="other-product-container">
+            <div
+              class="other-product-image-container"
+              style="margin-left: auto; margin-right: auto"
+              id="pTwo"
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                "
+              >
+                <img src="./images/milktea2.png" style="width: 50%;"/>
+              </div>
+            </div>
+          </div>
+          <div class="other-product-container">
+            <div
+              class="other-product-image-container"
+              style="margin-left: auto; margin-right: auto"
+              id="pThree"
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                "
+              >
+                <img style="width: 50%;" src="./images/milketea3.png" />
+              </div>
+            </div>
+          </div>
+          <div class="other-product-container">
+            <div
+              class="other-product-image-container"
+              style="margin-left: auto; margin-right: auto"
+              id="pFour"
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                "
+              >
+                <img style="width: 50%;" src="./images/milktea4.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- <contact us section> -->
+    <section class="contact-container">
+      <img
+        class="contact--us--img"
+        src="images/favicon/Logo-Teaopia.png"
+        alt="LOGO"
+      />
+      <div class="contact-message-container">
+        <h3>Stay in touch!</h3>
+        <p>
+          Stay up-to-date with our latest news, products, and promotions by
+          subscribing to our updates
+        </p>
+      </div>
+      <div class="email-input-container">
+        <input
+          class="email-input-box"
+          type="text"
+          id="search"
+          name="q"
+          placeholder="Enter your email address here"
+        />
+        <button class="subscribe-btn">Subscribe</button>
+      </div>
+    </section>
+
+    <footer class="footer-nav-list">
+      <div style="display: flex; justify-content: space-around; color: white">
+        <div>
+          <ul class="footer-list">
+            <li class="footer-title-nav"><a href="#">Our Company</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="footer-list">
+            <li class="footer-title-nav"><a href="menu.html">Menu</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Bubble Tea</a></li>
+            <li><a href="#">All products</a></li>
+            <li><a href="#">Gift</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="footer-list">
+            <li class="footer-title-nav"><a href="find-us.html">Find-us</a></li>
+            <li><a href="#">Pick-up Location</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Opening Hour</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="font-size: 64px; font-style: italic">Teaopia</h2>
+          <h3 style="font-size: 32px; font-style: italic">Since 2000</h3>
+          <div class="icons">
+            <a href="#"><img src="./images/fb.png" /></a>
+            <a href="#"><img src="./images/linkedin.png" /></a>
+            <a href="#"><img src="./images/twitter.png" /></a>
+            <a href="#"><img src="./images/ig.png" /></a>
+          </div>
+        </div>
+      </div>
+
+      <p class="copy-right-container">
+        Copyright &copy; 2023 Teaopia. All rights reserved
+      </p>
+    </footer>
+
+    <!-- This is where we add our awesome JavaScript code -->
+    <script src="./main.js"></script>
+    <script>
+      let productCount = 0;
+      let currProductIndex = "pOne";
+      const productsMeta = {
+        "pOne":'./images/favicon/product.png', 
+        "pTwo": './images/favicon/product2.png',
+        "pThree": './images/favicon/product3.png',
+        "pFout": './images/favicon/product4.png'}
+      document.addEventListener("DOMContentLoaded", function () {
+        const hoverableDivs = document.querySelectorAll(".other-product-image-container");
+        hoverableDivs.forEach((div) => {
+          div.addEventListener("click", () => {
+            const curr = document.getElementsByClassName('product-image-container')[0]
+            const currImg = curr.getElementsByTagName('img')[0];
+            const clickedImg = div.getElementsByTagName('img')[0];
+            div.getElementsByTagName('div')[0].innerHTML = '';
+            div.getElementsByTagName('div')[0].appendChild(currImg);
+            curr.getElementsByTagName('div')[0].innerHTML = '';
+            curr.getElementsByTagName('div')[0].appendChild(clickedImg);
+          });
+        });
+        updateSlider();
+        const ingredients = document.querySelectorAll(".aaaaaaa");
+        ingredients.forEach((div) => {
+          div.addEventListener("click", ()=>{
+            ingredients.forEach((div) => {
+              const clickedIngredients = div.getElementsByClassName("ingredient-count-container")[0];
+            clickedIngredients.style.display = "none";
+            })
+            const clickedIngredients = div.getElementsByClassName("ingredient-count-container")[0];
+            clickedIngredients.style.display = "flex";
+          })
+        })
+      });
+    </script>
+  </body>
+</html>
